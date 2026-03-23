@@ -38,5 +38,3 @@ This is a full-stack web application inspired by Airbnb, where users can create,
 - Git & GitHub
 
 ---
-
-## 📁 Project Structure
