@@ -26,6 +26,8 @@ module.exports.renderLoginForm = (req,res)=>{
 }
 
 module.exports.login = async(req,res)=>{
+    console.log("========= LOGIN SUCCESS =========");
+    console.log(req.user);
         req.flash("success", "Welcome back to Maxhotel")
         let redirectUrl = res.locals.redirectUrl || "/listings"
         res.redirect(redirectUrl)

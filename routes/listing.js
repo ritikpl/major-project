@@ -52,7 +52,7 @@ router.get("/search", async (req, res) => {
 router.get("/new", isLoggedIn,listingController.renderNewForm );
 // update,destroy,show
 router.route("/:id")
-.put(isLoggedIn,isOwner, validateListing,upload.single("listing[image][url]"), WrapAsync(listingController.update))
+.put(isLoggedIn,isOwner,upload.single("listing[image][url]"), validateListing, WrapAsync(listingController.update))
 .delete(isLoggedIn,isOwner, WrapAsync(listingController.destroy))
 .get(WrapAsync(listingController.show));
 
