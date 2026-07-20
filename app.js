@@ -1,4 +1,5 @@
 require('dotenv').config()
+const PORT = process.env.PORT || 8080;
 const express = require("express")
 const app = express();
 const mongoose = require("mongoose");
@@ -112,7 +113,6 @@ app.use((err, req, res, next) => {
   res.status(status).render("listings/error", { err });
 });
 
-app.listen(8080, ()=>{
-    console.log("server is listing on 8080");
-    
-})
+app.listen(PORT, () => {
+    console.log(`Server is listening on port ${PORT}`);
+});
